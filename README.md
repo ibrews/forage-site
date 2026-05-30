@@ -38,9 +38,9 @@ chrome --headless=new --window-size=1200,630 --screenshot=social.png social.html
 ## Heads up — the signup forms
 
 The **"Wishlist it!"** and **"Join my newsletter!"** forms are **not wired to a real backend yet.**
-They currently open a pre-filled `mailto:` so signups still reach an inbox honestly.
-Before launch, wire a real list (Buttondown / ConvertKit / Formspree / Worker) — see the
-`TODO(forage)` comments in `index.html` and the open questions in `REVIEW_NEEDED.md`.
+They open a pre-filled `mailto:` to **info@alexcoulombepresents.com**, so signups still reach an
+inbox honestly. Before launch, swap in a real list (Buttondown / ConvertKit / Formspree / Worker) —
+see the `TODO(forage)` comments in `index.html`.
 
 ---
 
