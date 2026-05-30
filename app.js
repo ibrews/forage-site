@@ -68,7 +68,7 @@
 
       // Honest stub: open the visitor's mail client with a pre-filled message
       // to the capture inbox. No backend = no silent black hole.
-      const to = form.dataset.mailto || "info@agilelens.com";
+      const to = form.dataset.mailto || "info@alexcoulombepresents.com";
       const subject = form.dataset.subject || "Forage signup";
       const body =
         `Add me to the Forage ${form.dataset.list || ""} list: ${email}\n\n` +
