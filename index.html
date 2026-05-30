@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forage — Fab's Ultimate Companion for Unreal Engine</title>
+
+  <!-- SEO + OpenGraph + Twitter (see publish-repo skill) -->
+  <meta name="description" content="Forage is Fab's Ultimate Companion — an AI-first asset scout for Unreal Engine. Manage your library, keep an unlimited wishlist, curate AI loadouts, and install packs zero-click." />
+  <meta name="author" content="Alex Coulombe (ibrews)" />
+  <meta property="og:title" content="Forage — Fab's Ultimate Companion" />
+  <meta property="og:description" content="An AI-first asset scout for Unreal Engine. Wrangle your Fab library, keep an unlimited wishlist, curate AI loadouts, install zero-click." />
+  <meta property="og:image" content="https://ibrews.github.io/forage-site/social.png" />
+  <meta property="og:url" content="https://ibrews.github.io/forage-site/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Forage — Fab's Ultimate Companion" />
+  <meta name="twitter:description" content="An AI-first asset scout for Unreal Engine. Wrangle your Fab library, keep an unlimited wishlist, curate AI loadouts, install zero-click." />
+  <meta name="twitter:image" content="https://ibrews.github.io/forage-site/social.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍃</text></svg>" />
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <div class="bg-glow"></div>
+
+  <div class="wrap">
+    <!-- nav -->
+    <header class="nav">
+      <div class="brand"><span class="mark">🍃</span> Forage</div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#wishlist">Wishlist</a>
+        <a href="#newsletter">Newsletter</a>
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="dot"></span> Fab's Ultimate Companion</span>
+        <h1 class="title">Forage</h1>
+        <p class="tagline">An AI-first asset scout for <em>Unreal Engine</em>.</p>
+        <p class="subpitch">
+          Your Fab library is a junk drawer. Your wishlist hit Fab's cap. Installing one
+          pack is a dozen clicks. Forage fixes all three — it scouts the packs you already
+          own, keeps an <strong>unlimited</strong> wishlist, curates the right loadout for
+          whatever you're building, and drops it into your project. Zero clicks.
+        </p>
+        <div class="cta-row">
+          <a href="#wishlist" class="btn btn-primary">Wishlist it! →</a>
+          <a href="#newsletter" class="btn btn-ghost">Join my newsletter!</a>
+        </div>
+        <p class="meta-line"><strong>CLI + MCP.</strong> Built for Unreal devs — and the AI agents building alongside them.</p>
+      </div>
+
+      <!-- terminal demo -->
+      <div class="terminal" id="how" aria-label="Example Forage session">
+        <div class="term-bar">
+          <span class="b r"></span><span class="b y"></span><span class="b g"></span>
+          <span class="name">forage — your owned Fab library</span>
+        </div>
+<div class="term-body"><span class="prompt">$</span> <span class="cmd">forage query "foggy medieval courtyard at dusk"</span>
+<span class="out">→ you already own 3 packs that fit:</span>
+<span class="hi">  1. Medieval Castle Walls Pro</span><span class="dim">   hero: SM_CastleGate</span>
+<span class="dim">     ↳ prune 17 dead engine versions (~3.2 GB)</span>
+<span class="hi">  2. Volumetric Fog Toolkit</span><span class="dim">    hero: BP_FogVolume</span>
+<span class="hi">  3. Dusk Sky HDRIs</span><span class="dim">           hero: T_Dusk_08</span>
+
+<span class="prompt">$</span> <span class="cmd">forage install medieval-castle-walls-pro</span>
+<span class="ok">✓ Added to Project</span> <span class="dim">— no clicks · 7.2s · /Game/MedievalCastle</span></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- features -->
+  <section class="features" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">What it does</div>
+        <h2>Stop wrestling Fab. Start building.</h2>
+        <p>Four things Fab should've shipped years ago.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="ico">📚</div>
+          <h3>Your whole library, searchable</h3>
+          <p>Hundreds of packs, one fast search. Forage's ranker is owned-aware and
+          multi-token — it surfaces the asset Fab's own search buries three pages deep.</p>
+        </div>
+
+        <div class="card amber">
+          <div class="ico">♾️</div>
+          <h3>A wishlist with no cap <span class="tag-pill">the big one</span></h3>
+          <p>Fab limits how much you can wishlist. Forage keeps an <strong>unlimited</strong>
+          local one — save every "want", tag it by project, and the day you buy it,
+          <code>forage install</code> takes over.</p>
+        </div>
+
+        <div class="card purple">
+          <div class="ico">🤖</div>
+          <h3>AI loadouts for any scene</h3>
+          <p>Describe what you're making. Forage curates a tight, non-redundant set from what
+          you own — with bloat estimates — and hands clean JSON to your AI build agent (or to you).</p>
+        </div>
+
+        <div class="card">
+          <div class="ico">⚡</div>
+          <h3>Zero-click install</h3>
+          <p><code>forage install &lt;pack&gt;</code> drives Unreal's Fab pane and clicks
+          <em>Add to Project</em> itself. Command to cached in ~7 seconds. Walk away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTAs -->
+  <section class="cta">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Get in early</div>
+        <h2>Forage is almost ready.</h2>
+        <p>Drop your email and I'll let you know the moment it ships.</p>
+      </div>
+
+      <p class="personal">
+        hey — I'm <span class="sig">Alex</span>. I make XR and Unreal things over at ibrews, and I
+        got tired of fighting Fab to manage the hundreds of packs I've bought. so I built Forage.
+        if you want it the day it's out — or just like watching weird tools get made — say hi below.
+      </p>
+
+      <div class="cta-grid">
+        <!-- WISHLIST -->
+        <div class="signup-card feature" id="wishlist">
+          <h3>🍃 Wishlist it!</h3>
+          <p class="sub">Be first in line. I'll email you the second Forage is downloadable.</p>
+          <!--
+            TODO(forage): wire a real email backend before launch.
+            Candidates: Buttondown, ConvertKit, Formspree, or a Cloudflare Worker.
+            CONFIRM the service + the destination/list address with Alex first
+            (see REVIEW_NEEDED.md). Until then this form opens a pre-filled mailto:
+            so signups are honest + actually reach an inbox — no fake "thanks".
+          -->
+          <form class="signup" data-list="wishlist"
+                data-mailto="info@agilelens.com"
+                data-subject="Forage — wishlist me (notify at launch)">
+            <input type="email" name="email" required autocomplete="email"
+                   placeholder="you@studio.com" aria-label="Your email for the Forage launch list" />
+            <button type="submit" class="btn btn-primary">Wishlist it!</button>
+          </form>
+          <p class="form-note" data-role="note">
+            No tracker, no spam — just a launch ping.
+          </p>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div class="signup-card" id="newsletter">
+          <h3>✉️ Join my newsletter!</h3>
+          <p class="sub">Occasional notes from Alex on Forage, Unreal, XR, and the odd AI experiment.</p>
+          <!--
+            TODO(forage): same as above — wire the real newsletter list (likely the same
+            provider as the ibrews/Agile Lens newsletter). Confirm list + address with Alex.
+          -->
+          <form class="signup" data-list="newsletter"
+                data-mailto="info@agilelens.com"
+                data-subject="ibrews newsletter — sign me up">
+            <input type="email" name="email" required autocomplete="email"
+                   placeholder="you@studio.com" aria-label="Your email for the ibrews newsletter" />
+            <button type="submit" class="btn btn-ghost">Subscribe</button>
+          </form>
+          <p class="form-note" data-role="note">
+            Low volume. Unsubscribe anytime.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="wrap foot-row">
+      <div>🍃 <strong>Forage</strong> — an <a href="https://github.com/ibrews">ibrews</a> tool by Alex Coulombe</div>
+      <div class="foot-links">
+        <a href="#features">Features</a>
+        <a href="#wishlist">Wishlist</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="https://twitter.com/ibrews">@ibrews</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

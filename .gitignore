@@ -1,0 +1,13 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# local dev
+.claude/
+_preview/
+*.local
+
+# internal notes — keep local, not in the public repo
+claude-progress.md
+REVIEW_NEEDED.md

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    background: #060810;
+    color: #eef1f8;
+    position: relative;
+  }
+  .bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(60% 70% at 16% 52%, rgba(155,140,255,0.32), transparent 68%),
+      radial-gradient(55% 60% at 88% 6%,  rgba(94,234,212,0.26), transparent 62%),
+      radial-gradient(60% 80% at 70% 115%, rgba(110,231,168,0.12), transparent 60%);
+  }
+  /* scattered stars */
+  .star { position: absolute; border-radius: 50%; background: #fff; }
+  .content {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 72px 80px;
+  }
+  .left { max-width: 720px; }
+  .tag {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 20px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase;
+    color: #5eead4;
+    border: 1px solid rgba(94,234,212,0.4);
+    background: rgba(94,234,212,0.07);
+    padding: 11px 20px; border-radius: 100px;
+  }
+  .tag .dot { width: 11px; height: 11px; border-radius: 50%; background: #6ee7a8; box-shadow: 0 0 14px #6ee7a8; }
+  .title {
+    font-size: 172px; font-weight: 700; line-height: 0.9; letter-spacing: -4px;
+    margin: 26px 0 0;
+    background: linear-gradient(130deg, #fff 18%, #a5d8ff 55%, #9b8cff 92%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .tagline { font-size: 34px; font-weight: 600; margin-top: 18px; color: #fff; }
+  .tagline em { color: #5eead4; font-style: normal; }
+  .chips { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; max-width: 700px; }
+  .chip {
+    font-size: 21px; font-weight: 500; color: #c9cfe2;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.04);
+    padding: 9px 18px; border-radius: 11px;
+  }
+  .chip b { color: #ffd479; font-weight: 600; }
+  /* right graphic: glowing leaf + constellation */
+  .right { position: relative; width: 300px; height: 300px; flex: 0 0 auto; margin-right: 12px; }
+  .orbit {
+    position: absolute; inset: 0; border-radius: 50%;
+    border: 1px solid rgba(94,234,212,0.18);
+  }
+  .orbit.two { inset: 38px; border-color: rgba(155,140,255,0.2); }
+  .glow {
+    position: absolute; inset: 0; border-radius: 50%;
+    background: radial-gradient(circle, rgba(110,231,168,0.35), transparent 62%);
+  }
+  .leaf {
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
+    font-size: 150px;
+    filter: drop-shadow(0 0 28px rgba(110,231,168,0.7));
+  }
+  .cdot { position: absolute; border-radius: 50%; background: #5eead4; box-shadow: 0 0 12px #5eead4; }
+  .footer {
+    position: absolute; left: 80px; right: 80px; bottom: 46px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 18px; letter-spacing: 2px; text-transform: uppercase; color: #6b7390; font-weight: 500;
+  }
+  .footer .r { color: #99a1ba; }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <!-- a sprinkle of stars -->
+  <div class="star" style="width:3px;height:3px;top:60px;left:140px;opacity:.8"></div>
+  <div class="star" style="width:2px;height:2px;top:120px;left:520px;opacity:.6"></div>
+  <div class="star" style="width:4px;height:4px;top:200px;left:90px;opacity:.5"></div>
+  <div class="star" style="width:2px;height:2px;top:430px;left:300px;opacity:.7"></div>
+  <div class="star" style="width:3px;height:3px;top:500px;left:640px;opacity:.5"></div>
+  <div class="star" style="width:2px;height:2px;top:80px;left:880px;opacity:.7"></div>
+  <div class="star" style="width:3px;height:3px;top:540px;left:1040px;opacity:.6"></div>
+
+  <div class="content">
+    <div class="left">
+      <span class="tag"><span class="dot"></span> Fab's Ultimate Companion</span>
+      <h1 class="title">Forage</h1>
+      <p class="tagline">An AI-first asset scout for <em>Unreal Engine</em>.</p>
+      <div class="chips">
+        <span class="chip">📚 Library</span>
+        <span class="chip"><b>♾️ Unlimited wishlist</b></span>
+        <span class="chip">🤖 AI loadouts</span>
+        <span class="chip">⚡ Zero-click install</span>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="glow"></div>
+      <div class="orbit"></div>
+      <div class="orbit two"></div>
+      <div class="leaf">🍃</div>
+      <div class="cdot" style="width:12px;height:12px;top:6px;left:150px"></div>
+      <div class="cdot" style="width:9px;height:9px;top:150px;left:288px;background:#9b8cff;box-shadow:0 0 12px #9b8cff"></div>
+      <div class="cdot" style="width:10px;height:10px;top:286px;left:130px"></div>
+      <div class="cdot" style="width:8px;height:8px;top:150px;left:2px;background:#a5d8ff;box-shadow:0 0 12px #a5d8ff"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>ibrews · Alex Coulombe</span>
+    <span class="r">ibrews.github.io/forage-site</span>
+  </div>
+</body>
+</html>
