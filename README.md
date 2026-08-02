@@ -37,10 +37,14 @@ chrome --headless=new --window-size=1200,630 --screenshot=social.png social.html
 
 ## Heads up — the signup forms
 
-The **"Wishlist it!"** and **"Join my newsletter!"** forms are **not wired to a real backend yet.**
-They open a pre-filled `mailto:` to **info@alexcoulombepresents.com**, so signups still reach an
-inbox honestly. Before launch, swap in a real list (Buttondown / ConvertKit / Formspree / Worker) —
-see the `TODO(forage)` comments in `index.html`.
+**"Wishlist it!"** now links out to [alexcoulombepresents.com/lab/forage#waitlist](https://www.alexcoulombepresents.com/lab/forage#waitlist),
+where the real Stripe/Neon/Resend-backed signup form lives (same infra as the rest of that site).
+That page also has real usage docs, screenshots, and the trailer — this landing page is just the
+front door now.
+
+**"Join my newsletter!"** is still **not wired to a real backend.** It opens a pre-filled `mailto:`
+to **info@alexcoulombepresents.com**, so signups still reach an inbox honestly. See the
+`TODO(forage)` comment in `index.html` if this one gets wired up too.
 
 ---
 

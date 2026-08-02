@@ -141,19 +141,14 @@
           <h3>🍃 Wishlist it!</h3>
           <p class="sub">Be first in line. I'll email you the second Forage is downloadable.</p>
           <!--
-            TODO(forage): wire a real email backend before launch.
-            Candidates: Buttondown, ConvertKit, Formspree, or a Cloudflare Worker.
-            CONFIRM the service + the destination/list address with Alex first
-            (see REVIEW_NEEDED.md). Until then this form opens a pre-filled mailto:
-            so signups are honest + actually reach an inbox — no fake "thanks".
+            The real, wired signup form (Stripe/Neon/Resend-backed, same infra as the rest
+            of alexcoulombepresents.com) lives on the full Forage page there, alongside real
+            usage docs, screenshots, and the trailer. Linking out instead of duplicating
+            signup infra here or opening that site's API to cross-origin requests.
           -->
-          <form class="signup" data-list="wishlist"
-                data-mailto="info@alexcoulombepresents.com"
-                data-subject="Forage — wishlist me (notify at launch)">
-            <input type="email" name="email" required autocomplete="email"
-                   placeholder="you@studio.com" aria-label="Your email for the Forage launch list" />
-            <button type="submit" class="btn btn-primary">Wishlist it!</button>
-          </form>
+          <a class="btn btn-primary" href="https://www.alexcoulombepresents.com/lab/forage#waitlist">
+            Wishlist it! →
+          </a>
           <p class="form-note" data-role="note">
             No tracker, no spam — just a launch ping.
           </p>
