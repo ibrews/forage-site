@@ -50,3 +50,7 @@ to **info@alexcoulombepresents.com**, so signups still reach an inbox honestly. 
 
 Forage itself (the CLI + MCP tool) lives in a separate repo. This is just the marketing front door.
 Built by [Alex Coulombe](https://twitter.com/ibrews) under the ibrews brand.
+
+## Support
+
+If you like seeing this kind of thing get built and shared, [donations are always welcome](https://www.alexcoulombepresents.com/support) — they buy hardware, render time, and the freedom to keep giving most of this away.
