@@ -1,6 +1,6 @@
-# forage-site
+# Forage Site
 
-Landing page for **Forage** — Fab's Ultimate Companion, an AI-first asset scout for Unreal Engine.
+This repository contains the static landing page for **Forage**, an AI-first asset scout for Unreal Engine and Fab libraries. It presents the product, links to the live waitlist, and provides a newsletter signup that opens a prefilled email instead of sending data to a backend.
 
 🔗 **Live:** https://ibrews.github.io/forage-site/
 
@@ -14,20 +14,21 @@ social.html   # 1200×630 OpenGraph/Twitter card source
 social.png    # rendered card (used for link unfurls)
 ```
 
-## Things to try
-
-1. **Visit the live site** → https://ibrews.github.io/forage-site/
-2. **Hit "Wishlist it!"** — drop your email to get pinged when Forage ships.
-3. **Read the terminal demo** in the hero — it walks the `forage query` → `forage install` flow.
-4. **Resize to mobile** — the layout reflows to a single column.
-5. **Paste the URL** into Slack/Discord/X — the 1200×630 social card unfurls automatically.
-
-## Local preview
+## Quickstart
 
 ```bash
-python -m http.server 8000
-# → http://localhost:8000
+python3 -m http.server 8000
 ```
+
+Open http://localhost:8000.
+
+## Things to Try
+
+1. **Open the local preview** — the Forage hero, feature cards, terminal demo, and animated star field should render without a build step.
+2. **Select "Wishlist it!"** — the button should open the Forage waitlist on alexcoulombepresents.com.
+3. **Submit an invalid newsletter address** — the page should keep focus on the email field and display “Hmm, that email looks off.”
+4. **Submit a valid newsletter address** — your mail client should open with a message addressed to `info@alexcoulombepresents.com`, and the page should briefly confirm the handoff.
+5. **Enable reduced motion and reload** — the page should keep the star canvas static while preserving the rest of the layout.
 
 ## Re-rendering the social card
 
