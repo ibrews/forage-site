@@ -26,7 +26,7 @@ Open http://localhost:8000.
 
 1. **Open the local preview** — the Forage hero, feature cards, terminal demo, and animated star field should render without a build step.
 2. **Select "Wishlist it!"** — the button should open the Forage waitlist on alexcoulombepresents.com.
-3. **Submit an invalid newsletter address** — the page should keep focus on the email field and display “Hmm, that email looks off.”
+3. **Submit an invalid newsletter address** — the page should keep focus on the email field and display “Hmm, that email looks off — mind checking it?”
 4. **Submit a valid newsletter address** — your mail client should open with a message addressed to `info@alexcoulombepresents.com`, and the page should briefly confirm the handoff.
 5. **Enable reduced motion and reload** — the page should keep the star canvas static while preserving the rest of the layout.
 
