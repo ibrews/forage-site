@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Forage — Fab's Ultimate Companion for Unreal Engine</title>
+  <title>Forage | Your Fab library in Unreal Engine 5.9 and earlier</title>
 
   <!-- SEO + OpenGraph + Twitter (see publish-repo skill) -->
-  <meta name="description" content="Forage is Fab's Ultimate Companion — an AI-first asset scout for Unreal Engine. Manage your library, keep an unlimited wishlist, curate AI loadouts, and install packs zero-click." />
+  <meta name="description" content="Choose scene assets from your own Fab library. See the Unreal Engine 5.9 Preview handoff and the Forage workflow for 5.8 and earlier." />
   <meta name="author" content="Alex Coulombe (ibrews)" />
-  <meta property="og:title" content="Forage — Fab's Ultimate Companion" />
-  <meta property="og:description" content="An AI-first asset scout for Unreal Engine. Wrangle your Fab library, keep an unlimited wishlist, curate AI loadouts, install zero-click." />
+  <meta property="og:title" content="Forage | Your Fab library, scene by scene" />
+  <meta property="og:description" content="Choose scene assets from your own Fab library. See the Unreal Engine 5.9 Preview handoff and the Forage workflow for 5.8 and earlier." />
   <meta property="og:image" content="https://ibrews.github.io/forage-site/social.png" />
   <meta property="og:url" content="https://ibrews.github.io/forage-site/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Forage — Fab's Ultimate Companion" />
-  <meta name="twitter:description" content="An AI-first asset scout for Unreal Engine. Wrangle your Fab library, keep an unlimited wishlist, curate AI loadouts, install zero-click." />
+  <meta name="twitter:title" content="Forage | Your Fab library, scene by scene" />
+  <meta name="twitter:description" content="Choose scene assets from your own Fab library. See the Unreal Engine 5.9 Preview handoff and the Forage workflow for 5.8 and earlier." />
   <meta name="twitter:image" content="https://ibrews.github.io/forage-site/social.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +25,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍃</text></svg>" />
 </head>
 <body>
-  <canvas id="stars"></canvas>
+  <canvas id="stars" aria-hidden="true"></canvas>
   <div class="bg-glow"></div>
 
   <div class="wrap">
@@ -34,8 +34,8 @@
       <div class="brand"><span class="mark">🍃</span> Forage</div>
       <nav class="nav-links">
         <a href="#features">Features</a>
-        <a href="#how">How it works</a>
-        <a href="#wishlist">Wishlist</a>
+        <a href="#versions">Engine versions</a>
+        <a href="#access">Get Forage</a>
         <a href="#newsletter">Newsletter</a>
       </nav>
     </header>
@@ -43,115 +43,74 @@
     <!-- hero -->
     <section class="hero">
       <div class="hero-copy">
-        <span class="eyebrow"><span class="dot"></span> Fab's Ultimate Companion</span>
+        <p class="kicker">UE 5.9 Preview · 5.8 and earlier</p>
         <h1 class="title">Forage</h1>
-        <p class="tagline">An AI-first asset scout for <em>Unreal Engine</em>.</p>
-        <p class="subpitch">
-          Your Fab library is a junk drawer. Your wishlist hit Fab's cap. Installing one
-          pack is a dozen clicks. Forage fixes all three — it scouts the packs you already
-          own, keeps an <strong>unlimited</strong> wishlist, curates the right loadout for
-          whatever you're building, and drops it into your project. Zero clicks.
-        </p>
+        <p class="tagline">Build a scene from the Fab packs <em>you already own.</em></p>
+        <p class="subpitch">Ask for a castle with horses at the gates. Forage searches your library for the architecture and the horses, then gives your build agent a shortlist with titles and sellers.</p>
         <div class="cta-row">
-          <a href="#wishlist" class="btn btn-primary">Wishlist it! →</a>
-          <a href="#newsletter" class="btn btn-ghost">Join my newsletter!</a>
+          <a href="#versions" class="btn btn-primary">Find my engine version ↓</a>
+          <a href="#access" class="btn btn-ghost">Get the member build</a>
         </div>
-        <p class="meta-line"><strong>CLI + MCP.</strong> Built for Unreal devs — and the AI agents building alongside them.</p>
       </div>
-
-      <!-- terminal demo -->
-      <div class="terminal" id="how" aria-label="Example Forage session">
-        <div class="term-bar">
-          <span class="b r"></span><span class="b y"></span><span class="b g"></span>
-          <span class="name">forage — your owned Fab library</span>
-        </div>
-<div class="term-body"><span class="prompt">$</span> <span class="cmd">forage query "foggy medieval courtyard at dusk"</span>
-<span class="out">→ you already own 3 packs that fit:</span>
-<span class="hi">  1. Medieval Castle Walls Pro</span><span class="dim">   hero: SM_CastleGate</span>
-<span class="dim">     ↳ prune 17 dead engine versions (~3.2 GB)</span>
-<span class="hi">  2. Volumetric Fog Toolkit</span><span class="dim">    hero: BP_FogVolume</span>
-<span class="hi">  3. Dusk Sky HDRIs</span><span class="dim">           hero: T_Dusk_08</span>
-
-<span class="prompt">$</span> <span class="cmd">forage install medieval-castle-walls-pro</span>
-<span class="ok">✓ Added to Project</span> <span class="dim">— no clicks · 7.2s · /Game/MedievalCastle</span></div>
-      </div>
+      <figure id="how" class="demo">
+        <video controls playsinline preload="metadata" poster="demo-poster.jpg" aria-label="Forage workflow demonstration" src="forage-demo.mp4"></video>
+        <figcaption>Watch Forage scout a castle and horses, then verify an owned pack inside a 5.9 Preview project. <a href="#transcript">Read the walkthrough</a></figcaption>
+      </figure>
     </section>
   </div>
 
-  <!-- features -->
-  <section class="features" id="features">
+  <section class="features" id="versions">
     <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">What it does</div>
-        <h2>Stop wrestling Fab. Start building.</h2>
-        <p>Four things Fab should've shipped years ago.</p>
-      </div>
-
+      <div class="section-head"><h2>Which Unreal Engine are you using?</h2></div>
       <div class="grid">
-        <div class="card">
-          <div class="ico">📚</div>
-          <h3>Your whole library, searchable</h3>
-          <p>Hundreds of packs, one fast search. Forage's ranker is owned-aware and
-          multi-token — it surfaces the asset Fab's own search buries three pages deep.</p>
-        </div>
-
-        <div class="card amber">
-          <div class="ico">♾️</div>
-          <h3>A wishlist with no cap <span class="tag-pill">the big one</span></h3>
-          <p>Fab limits how much you can wishlist. Forage keeps an <strong>unlimited</strong>
-          local one — save every "want", tag it by project, and the day you buy it,
-          <code>forage install</code> takes over.</p>
-        </div>
-
-        <div class="card purple">
-          <div class="ico">🤖</div>
-          <h3>AI loadouts for any scene</h3>
-          <p>Describe what you're making. Forage curates a tight, non-redundant set from what
-          you own — with bloat estimates — and hands clean JSON to your AI build agent (or to you).</p>
-        </div>
-
-        <div class="card">
-          <div class="ico">⚡</div>
-          <h3>Zero-click install</h3>
-          <p><code>forage install &lt;pack&gt;</code> drives Unreal's Fab pane and clicks
-          <em>Add to Project</em> itself. Command to cached in ~7 seconds. Walk away.</p>
-        </div>
+        <article class="card version">
+          <div class="kicker">Unreal Engine 5.9 Preview</div>
+          <h3>Hand your picks to Fab</h3>
+          <p>Open a test project. Enable Fab, Unreal MCP and its toolsets. Connect your agent to both the editor and Forage. You can also run the shortlist from a terminal.</p>
+          <pre><code>forage fab-handoff "castle with horses"</code></pre>
+          <p>Ask the agent to find a pick in your signed-in Fab library. Choose the pack and project. Epic starts the download. Look for the imported assets in the Content Browser before placing them.</p>
+          <details><summary>Try this with a connected agent</summary><p>Use Forage’s fab-handoff tool to shortlist packs for a castle with horses. Look up the picks in my Unreal editor’s Fab library and show matching titles and sellers. Let me pick one before installing.</p><p>From the CLI, add <code>--editor-port PORT</code> using the port in Unreal’s Model Context Protocol preferences. Add <code>--catalog</code> for a public catalog lookup. Forage can run either lookup directly.</p><a href="https://dev.epicgames.com/documentation/unreal-engine/unreal-mcp-in-unreal-editor">Epic’s Unreal MCP setup ↗</a></details>
+        </article>
+        <article class="card version earlier">
+          <div class="kicker">Unreal Engine 5.8 and earlier</div>
+          <h3>Scout first. Add your pick in Fab.</h3>
+          <p>The Forage CLI runs outside Unreal. Search the library you’ve synced, get a scene shortlist, and keep a local wishlist tagged by project. You can do all three with the editor closed.</p>
+          <pre><code>forage query "castle"
+forage describe-loadout "medieval castle"
+forage wishlist ls</code></pre>
+          <p>Check the pack’s engine compatibility in Fab. Use Add to Project in a supported editor, or select a compatible project in the Epic Games Launcher. The optional Forage editor plugin needs a matching engine and platform build.</p>
+        </article>
       </div>
     </div>
   </section>
 
+  <section class="features" id="features">
+    <div class="wrap">
+      <div class="section-head"><h2>Inside your library</h2></div>
+      <div class="grid">
+        <article class="card"><h3>Find the missing piece</h3><p>Search a specific prop, or ask for a whole scene. A local cache keeps the shortlist available between editor sessions.</p></article>
+        <article class="card"><h3>Keep a project wishlist</h3><p>Save and tag candidates locally. Export or import lists to move them between machines.</p></article>
+      </div>
+      <details class="walkthrough" id="transcript"><summary>Demo walkthrough</summary>
+        <ol><li>Run <code>forage query "horse"</code> against the local library. It finds Horse Starter Kit from Living Systems. On 5.8 and earlier, check compatibility in Fab and add your pick manually.</li><li>Ask for a castle with horses. Forage shortlists Medieval Castle from Dexsoft Games and Horse Starter Kit from Living Systems.</li><li>Connect to the signed-in 5.9 Preview editor. Fab offers an asset pack for the castle. The horse kit is a complete project, so it cannot be added to this open project.</li><li>Forage also selected Pro Icon Pack from Piontek. Epic handed off its UE 5.5 asset pack to the 5.9 editor. A live Asset Registry search then found 215 imported entries under <code>/Game/ProIconPack</code>, including its demo map.</li></ol>
+      </details>
+    </div>
+  </section>
   <!-- CTAs -->
-  <section class="cta">
+  <section class="cta" id="access">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">Get in early</div>
-        <h2>Forage is almost ready.</h2>
-        <p>Drop your email and I'll let you know the moment it ships.</p>
+        <h2>Get Forage</h2>
+        <p>The Python 3.12+ member preview includes the CLI and Forage MCP. It connects to the Fab tools supplied with Unreal Engine 5.9 Preview.</p>
       </div>
-
-      <p class="personal">
-        hey — I'm <span class="sig">Alex</span>. I make XR and Unreal things over at ibrews, and I
-        got tired of fighting Fab to manage the hundreds of packs I've bought. so I built Forage.
-        if you want it the day it's out — or just like watching weird tools get made — say hi below.
-      </p>
 
       <div class="cta-grid">
         <!-- WISHLIST -->
         <div class="signup-card feature" id="wishlist">
-          <h3>🍃 Wishlist it!</h3>
-          <p class="sub">Be first in line. I'll email you the second Forage is downloadable.</p>
-          <!--
-            The real, wired signup form (Stripe/Neon/Resend-backed, same infra as the rest
-            of alexcoulombepresents.com) lives on the full Forage page there, alongside real
-            usage docs, screenshots, and the trailer. Linking out instead of duplicating
-            signup infra here or opening that site's API to cross-origin requests.
-          -->
-          <a class="btn btn-primary" href="https://www.alexcoulombepresents.com/lab/forage#waitlist">
-            Wishlist it! →
-          </a>
-          <p class="form-note" data-role="note">
-            No tracker, no spam — just a launch ping.
-          </p>
+          <h3>Member download</h3>
+          <p class="sub">Open Lab Tools for private repository access. If you already have access, download the Python wheel and follow the install steps in the release.</p>
+          <a class="btn btn-primary" href="https://github.com/ibrews/forage/releases/tag/v0.1.1b1">Open private release ↗</a>
+          <p class="form-note"><a href="https://www.alexcoulombepresents.com/members/tools">Member access instructions</a> · <a href="https://www.alexcoulombepresents.com/lab/forage#waitlist">Join the waitlist</a></p>
         </div>
 
         <!-- NEWSLETTER -->
@@ -180,10 +139,10 @@
   <!-- footer -->
   <footer>
     <div class="wrap foot-row">
-      <div>🍃 <strong>Forage</strong> — an <a href="https://github.com/ibrews">ibrews</a> tool by Alex Coulombe</div>
+      <div>🍃 <strong>Forage</strong> by <a href="https://www.alexcoulombepresents.com">Alex Coulombe Presents</a></div>
       <div class="foot-links">
         <a href="#features">Features</a>
-        <a href="#wishlist">Wishlist</a>
+        <a href="#access">Get Forage</a>
         <a href="#newsletter">Newsletter</a>
         <a href="https://twitter.com/ibrews">@ibrews</a>
       </div>

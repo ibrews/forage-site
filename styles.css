@@ -26,6 +26,20 @@
 
 * { box-sizing: border-box; }
 
+.demo { margin: 0; min-width: 0; }
+.demo video { width: 100%; aspect-ratio: 16 / 9; display: block; background: var(--bg-soft); border: 1px solid var(--card-line); border-radius: var(--r); box-shadow: var(--shadow); }
+.demo figcaption { margin-top: 12px; color: var(--muted); font-size: .87rem; }
+.demo a, .walkthrough a, .version a, .form-note a { color: var(--teal); text-decoration: underline; text-underline-offset: .18em; }
+.version { min-width: 0; }
+.version .kicker { color: var(--teal); }
+.version.earlier .kicker { color: var(--amber); }
+.version pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 14px 16px; border: 1px solid var(--card-line); border-radius: 10px; background: var(--bg); color: var(--ink); font-size: .85rem; }
+.version details, .walkthrough { margin-top: 1.25rem; color: var(--muted); }
+.version details p { margin: .7rem 0; }
+.walkthrough ol { padding-inline-start: 1.5rem; }
+summary { cursor: pointer; color: var(--ink); }
+.version summary { font-weight: 600; }
+
 html { scroll-behavior: smooth; }
 
 body {
