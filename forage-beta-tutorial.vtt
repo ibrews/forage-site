@@ -1,0 +1,95 @@
+WEBVTT
+
+1
+00:00:00.550 --> 00:00:04.731
+Take a single mesh from a practice
+pack and add it to your Unreal project.
+
+2
+00:00:05.381 --> 00:00:09.840
+On the Forage beta page, enter your email
+and choose “Email my beta link.”
+
+3
+00:00:10.190 --> 00:00:15.438
+Open the link in your inbox, then download
+the Windows ZIP for your Unreal version.
+
+4
+00:00:16.088 --> 00:00:20.611
+Close Unreal. In Windows, open the folder
+that contains your project file.
+
+5
+00:00:20.961 --> 00:00:26.251
+Open Plugins, or create that folder.
+Extract the entire ForageBeta folder here.
+
+6
+00:00:26.601 --> 00:00:30.335
+Check that ForageBeta.uplugin
+is directly inside it.
+
+7
+00:00:30.985 --> 00:00:35.209
+Open the project, choose Edit → Plugins,
+and search for Forage Beta.
+
+8
+00:00:35.559 --> 00:00:38.695
+Enable the plugin and restart
+Unreal when prompted.
+
+9
+00:00:39.345 --> 00:00:42.395
+Open Window → Forage → Guided Tutorial.
+
+10
+00:00:43.045 --> 00:00:47.269
+The first dialog offers to stage
+the practice mesh and its dependencies.
+
+11
+00:00:47.619 --> 00:00:52.441
+Choose Yes. The staging folder is
+under Saved/ForageBeta in your project.
+
+12
+00:00:53.091 --> 00:00:58.040
+Review the three filenames. Choose Yes again
+to add them to the project's Content folder.
+
+13
+00:00:58.690 --> 00:01:03.703
+Unreal selects the token mesh. Its material
+and texture are in the same folder.
+
+14
+00:01:04.353 --> 00:01:07.937
+Drag the mesh into the viewport.
+You've added the token to your level.
+
+15
+00:01:08.587 --> 00:01:13.558
+To explore your own project's assets,
+open Window → Forage → Open Dashboard.
+
+16
+00:01:14.208 --> 00:01:18.837
+Choose Check for Updates in the Forage menu
+to see whether a newer version is available.
+
+17
+00:01:19.187 --> 00:01:23.603
+Read the release notes and close Unreal
+before replacing the plugin folder.
+
+18
+00:01:24.253 --> 00:01:27.176
+For help and release notes,
+return to the beta page.
+
+19
+00:01:27.526 --> 00:01:32.902
+Donations to Alex's Lab are optional.
+You can repeat the guided tutorial at any time.
