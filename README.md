@@ -3,6 +3,7 @@
 Public landing page and first-run guide for the free Windows beta. The package is delivered through the verified download on Alex Coulombe Presents. The product source stays in its private repository.
 
 - [Live site](https://ibrews.github.io/forage-site/)
+- [Engine and workflow guide](https://ibrews.github.io/forage-site/#versions)
 - [Free beta download](https://www.alexcoulombepresents.com/lab/forage#download)
 - [Release notes](https://www.alexcoulombepresents.com/lab/forage#updates)
 - [Optional donations](https://www.alexcoulombepresents.com/support)
