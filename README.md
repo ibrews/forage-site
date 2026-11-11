@@ -1,57 +1,24 @@
-# Forage Site
+# Forage beta site
 
-This repository contains the static landing page for **Forage**, an AI-first asset scout for Unreal Engine and Fab libraries. It presents the product, links to the live waitlist, and provides a newsletter signup that opens a prefilled email instead of sending data to a backend.
+Public landing page and first-run guide for the free Windows beta. The package is delivered through the verified download on Alex Coulombe Presents. The product source stays in its private repository.
 
-🔗 **Live:** https://ibrews.github.io/forage-site/
+- [Live site](https://ibrews.github.io/forage-site/)
+- [Free beta download](https://www.alexcoulombepresents.com/lab/forage#download)
+- [Release notes](https://www.alexcoulombepresents.com/lab/forage#updates)
+- [Optional donations](https://www.alexcoulombepresents.com/support)
 
-A tiny static site — plain HTML/CSS/JS, no framework, no build step. Just open `index.html`.
+## Preview
 
-```
-index.html    # the page
-styles.css    # Spatial Deck visual language (dark, Space Grotesk, teal/purple/amber)
-app.js         # twinkling-stars canvas + signup form handling
-social.html   # 1200×630 OpenGraph/Twitter card source
-social.png    # rendered card (used for link unfurls)
-```
+Serve the repository with `python -m http.server 8000` and open `http://localhost:8000`. GitHub Pages serves the main branch from its root. There is no build step.
 
-## Quickstart
+## Media
 
-```bash
-python3 -m http.server 8000
-```
+The short coin demo uses Epic’s Content Examples as a local prototype case study. The narrated setup tutorial uses the original token in the distributed beta.
 
-Open http://localhost:8000.
+| Asset | Public path |
+| --- | --- |
+| Coin promo and cover | `forage-coin-demo.mp4`, `forage-coin-demo-token-landing.mp4`, `forage-coin-cover.jpg` |
+| First-run tutorial and poster | `forage-beta-tutorial.mp4`, `forage-beta-tutorial-poster.jpg` |
+| English captions | `forage-beta-tutorial.vtt` |
 
-## Things to Try
-
-1. **Play the command-line demo** and open the walkthrough beneath the version guide. The recording uses the member wheel and a local Unreal Engine 5.9 Preview editor.
-2. **Open the engine guide** for 5.9 Preview or 5.8 and earlier. The member download points to a private release. New members can use the access instructions, and the public waitlist stays available.
-3. **Submit an invalid newsletter address** — the page should keep focus on the email field and display “Hmm, that email looks off — mind checking it?”
-4. **Submit a valid newsletter address** — your mail client should open with a message addressed to `info@alexcoulombepresents.com`, and the page should briefly confirm the handoff.
-5. **Enable reduced motion and reload** — the page should keep the star canvas static while preserving the rest of the layout.
-
-## Re-rendering the social card
-
-```bash
-chrome --headless=new --window-size=1200,630 --screenshot=social.png social.html
-```
-
-## Heads up — the signup forms
-
-**"Wishlist it!"** now links out to [alexcoulombepresents.com/lab/forage#waitlist](https://www.alexcoulombepresents.com/lab/forage#waitlist),
-where the real Stripe/Neon/Resend-backed signup form lives (same infra as the rest of that site).
-That page also has real usage docs, screenshots, and the trailer — this landing page is just the
-front door now.
-
-**"Join my newsletter!"** is still **not wired to a real backend.** It opens a pre-filled `mailto:`
-to **info@alexcoulombepresents.com**, so signups still reach an inbox honestly. See the
-`TODO(forage)` comment in `index.html` if this one gets wired up too.
-
----
-
-Forage itself (the CLI + MCP tool) lives in a separate repo. This is just the marketing front door.
-Built by [Alex Coulombe Presents](https://github.com/ibrews).
-
-## Support
-
-If you like seeing this kind of thing get built and shared, [donations are always welcome](https://www.alexcoulombepresents.com/support) — they buy hardware, render time, and the freedom to keep giving most of this away.
+Check native playback, caption cues, mobile layout and the external download link after a Pages deployment. The optional newsletter form opens the visitor’s email app with a draft.
