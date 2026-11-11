@@ -14,11 +14,12 @@ Serve the repository with `python -m http.server 8000` and open `http://localhos
 
 ## Media
 
-The short coin demo uses Epic’s Content Examples as a local prototype case study. The narrated setup tutorial uses the original token in the distributed beta.
+The short coin demo uses Epic’s Content Examples as a local prototype case study. Its final Unreal shot follows one pickup coin through a spin, fall and material change on impact. The narrated setup tutorial uses the original token in the distributed beta.
 
 | Asset | Public path |
 | --- | --- |
-| Coin promo and cover | `forage-coin-demo.mp4`, `forage-coin-demo-token-landing.mp4`, `forage-coin-cover.jpg` |
+| Coin promo and cover | `forage-coin-demo.mp4`, `forage-coin-demo-give-it-a-spin.mp4`, `forage-coin-cover.jpg` |
+| Previous branded landing edition | `forage-coin-demo-token-landing.mp4` |
 | First-run tutorial and poster | `forage-beta-tutorial.mp4`, `forage-beta-tutorial-poster.jpg` |
 | English captions | `forage-beta-tutorial.vtt` |
 
