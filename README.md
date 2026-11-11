@@ -18,7 +18,8 @@ The short coin demo uses Epic’s Content Examples as a local prototype case stu
 
 | Asset | Public path |
 | --- | --- |
-| Coin promo and cover | `forage-coin-demo.mp4`, `forage-coin-demo-give-it-a-spin.mp4`, `forage-coin-cover.jpg` |
+| Coin promo and cover | `forage-coin-demo.mp4`, `forage-coin-demo-join-the-free-beta.mp4`, `forage-coin-cover.jpg` |
+| Earlier continuous-spin edition | `forage-coin-demo-give-it-a-spin.mp4` |
 | Previous branded landing edition | `forage-coin-demo-token-landing.mp4` |
 | First-run tutorial and poster | `forage-beta-tutorial.mp4`, `forage-beta-tutorial-poster.jpg` |
 | English captions | `forage-beta-tutorial.vtt` |
