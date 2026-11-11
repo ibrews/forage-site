@@ -308,6 +308,23 @@ code {
   border-top: 1px solid var(--line);
   padding: 14px 0;
 }
+.engine-workflows article {
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+.engine-workflows article:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.engine-workflows h3 {
+  font-size: 1.35rem;
+  letter-spacing: -0.035em;
+}
+.engine-workflows .channel {
+  margin-top: 6px;
+  color: var(--gold);
+  font-size: 0.87rem;
+}
 .questions details:last-child {
   border-bottom: 1px solid var(--line);
 }

@@ -31,7 +31,8 @@
     <header class="mast wrap">
       <a class="wordmark" href="#main">Forage</a>
       <nav aria-label="Main navigation">
-        <a href="#install">Install</a><a href="#tutorial">Tutorial</a><a href="#help">Help</a>
+        <a href="#versions">Versions</a><a href="#install">Install</a><a href="#tutorial">Tutorial</a
+        ><a href="#help">Help</a>
       </nav>
     </header>
     <main id="main">
@@ -129,8 +130,8 @@
         </figure>
       </section>
 
-      <section class="band" id="versions">
-        <div class="wrap section split install" id="install">
+      <section class="band" id="install">
+        <div class="wrap section split install">
           <div>
             <p class="eyebrow">Windows setup</p>
             <h2>Install the beta</h2>
@@ -158,9 +159,52 @@
               <strong>Place the token.</strong> The separate add-to-project prompt copies the three verified
               assets to <code>Content/ForageBetaSample</code>. Drag <code>SM_ForageToken</code> from the
               Content Browser into the viewport. If Unreal doesn’t highlight the token, press
-              <kbd>Ctrl+Space</kbd> to open the Content Drawer and browse to <code>Content/ForageBetaSample</code>.
+              <kbd>Ctrl+Space</kbd> to open the Content Drawer and browse to
+              <code>Content/ForageBetaSample</code>.
             </li>
           </ol>
+        </div>
+      </section>
+
+      <section class="wrap section split" id="versions" aria-labelledby="versions-title">
+        <div>
+          <p class="eyebrow">Engine versions</p>
+          <h2 id="versions-title">Choose your Unreal workflow</h2>
+        </div>
+        <div class="engine-workflows">
+          <article>
+            <h3>UE 5.8 and earlier</h3>
+            <p class="channel">Standalone Forage CLI · Earlier member build</p>
+            <p>
+              Search your synced Fab library, shortlist owned packs for a scene, and keep a local wishlist
+              tagged by project. This works with the editor closed. Check compatibility in Fab, then use
+              <strong>Add to Project</strong> in a supported editor or select a compatible project in the
+              Launcher.
+            </p>
+            <p><code>forage describe-loadout "castle with horses"</code></p>
+            <p><a href="https://www.alexcoulombepresents.com/members/tools">Earlier member tools</a></p>
+          </article>
+          <article>
+            <h3>UE 5.8.4 and 5.9 Preview</h3>
+            <p class="channel">Free Windows ZIP</p>
+            <p>
+              Run the original practice token tutorial in <strong>Window → Forage</strong>, search your
+              project's Content folder, and stage a selection from local data. A local manifest and matching
+              dependency index let you preview which files a package requires.
+              <a href="#install">Install the free beta</a>.
+            </p>
+          </article>
+          <article>
+            <h3>UE 5.9 Preview</h3>
+            <p class="channel">Native Fab tools · Connected-agent workflow</p>
+            <p>
+              Enable Fab and Unreal MCP with the Fab toolset. Connect an agent to the editor and Forage, then
+              ask it to find a shortlisted pack in your signed-in Fab library. Choose the pack and target
+              project. Epic hands the full-pack download to the editor. Verify the imported assets in the
+              Content Browser.
+            </p>
+            <p><code>forage fab-handoff "castle with horses"</code></p>
+          </article>
         </div>
       </section>
 
